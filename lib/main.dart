@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'add_budget.dart';
+import 'budget_data.dart';
+import 'drawer.dart';
 import 'package:flutter/src/material/colors.dart';
 
 void main() {
@@ -17,15 +20,15 @@ class CounterApp extends StatelessWidget {
         primarySwatch: Colors.lime,
         scaffoldBackgroundColor: Colors.grey.shade100,
       ),
-      home: const MyHomePage(title: "Kemi's Program Counter"),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key});
 
-  final String title;
+  final String title = 'Counter';
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -52,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      drawer: buildDrawer(context),
       body: Center(
         child: Column(
 
