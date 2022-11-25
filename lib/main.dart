@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'add_budget.dart';
-import 'budget_data.dart';
-import 'drawer.dart';
+import '../page/add_budget.dart';
+import '../page/budget_data.dart';
+import '../drawer.dart';
 import 'package:flutter/src/material/colors.dart';
 
 void main() {

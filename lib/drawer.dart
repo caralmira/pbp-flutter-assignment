@@ -1,8 +1,9 @@
-import 'main.dart';
-import 'add_budget.dart';
-import 'budget_data.dart';
+import '../main.dart';
+import '../page/add_budget.dart';
+import '../page/budget_data.dart';
 import 'package:flutter/src/material/colors.dart';
 import 'package:flutter/material.dart';
+import '../page/watchlist_page.dart';
 
 Drawer buildDrawer(BuildContext context) {
     String ? route = ModalRoute.of(context)?.settings.name;
@@ -79,6 +80,23 @@ Drawer buildDrawer(BuildContext context) {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(builder: (context) => const BudgetData()),
+                        );
+                    },
+                ),
+                ListTile(
+                    title: const Text(
+                        'My Watchlist',
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700,
+                            
+                        ),
+                        textAlign: TextAlign.center,
+                    ),
+                    onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => const WatchListPage()),
                         );
                     },
                 ),
